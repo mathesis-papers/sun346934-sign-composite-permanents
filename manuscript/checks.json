@@ -1,0 +1,266 @@
+{
+  "additive_matrix_checks": {
+    "cases": 120,
+    "entry_component_range": [
+      -7,
+      7
+    ],
+    "range_order": [
+      0,
+      9
+    ],
+    "samples_per_order": 12,
+    "seed": 346934
+  },
+  "additive_matrix_permutation_checks": {
+    "cases": 84,
+    "range_order": [
+      0,
+      6
+    ]
+  },
+  "arithmetic": "Unbounded Python integers; no floating-point arithmetic.",
+  "cited_reciprocal_congruence": {
+    "cases": 5,
+    "modulus": "p^2",
+    "primes": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "reference": "https://arxiv.org/abs/2605.19502v1; Theorem 2 (12)"
+  },
+  "coverage": "Finite exact checks of the displayed identities and examples; the all-order results have written proofs in note.tex.",
+  "difference_matrix_permutation_checks": {
+    "cases": 9,
+    "range_order": [
+      0,
+      8
+    ]
+  },
+  "difference_matrix_subset_checks": {
+    "cases": 13,
+    "range_order": [
+      0,
+      12
+    ]
+  },
+  "exception_q4": {
+    "column_values": [
+      0,
+      1,
+      1
+    ],
+    "permanent": 2,
+    "row_values": [
+      1,
+      0,
+      0
+    ]
+  },
+  "factorial_split_classification": {
+    "moduli": 500,
+    "range_modulus": [
+      2,
+      501
+    ],
+    "splits": 125750
+  },
+  "first_values": [
+    -1,
+    52,
+    -18660,
+    24446016,
+    -85000104000,
+    647188836814080
+  ],
+  "half_order_square_sum_prime_congruence": {
+    "cases": 45,
+    "modulus": "p",
+    "primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137,
+      139,
+      149,
+      151,
+      157,
+      163,
+      167,
+      173,
+      179,
+      181,
+      191,
+      193,
+      197,
+      199
+    ]
+  },
+  "matching_identity_multisets": {
+    "alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "cases": 94,
+    "equality_criterion": true,
+    "orders": [
+      2,
+      4,
+      6,
+      8
+    ]
+  },
+  "matching_identity_samples": {
+    "cases": 100,
+    "component_range": [
+      -5,
+      5
+    ],
+    "equality_criterion": true,
+    "orders": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ],
+    "samples_per_order": 20,
+    "seed": 34693402
+  },
+  "power_sum_and_difference": {
+    "cases": 365,
+    "moduli": "composite, excluding 4",
+    "range_exponent": [
+      0,
+      4
+    ],
+    "range_modulus": [
+      2,
+      101
+    ]
+  },
+  "prime_and_composite_congruences": {
+    "cases": 130,
+    "range_n": [
+      1,
+      130
+    ]
+  },
+  "sequence_and_positive_formula": {
+    "cases": 130,
+    "range_n": [
+      1,
+      130
+    ],
+    "source": "https://oeis.org/A346934/b346934.txt"
+  },
+  "squared_sum_expansion": {
+    "cases": 9,
+    "range_order": [
+      0,
+      8
+    ]
+  },
+  "status": "PASS",
+  "sum_matrix_congruence": {
+    "cases": 130,
+    "range_n": [
+      1,
+      130
+    ]
+  },
+  "sum_prime_square_congruence": {
+    "cases": 45,
+    "modulus": "p^2",
+    "primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137,
+      139,
+      149,
+      151,
+      157,
+      163,
+      167,
+      173,
+      179,
+      181,
+      191,
+      193,
+      197,
+      199
+    ]
+  },
+  "universal_gcd": {
+    "binary_witness_range_order": [
+      0,
+      12
+    ],
+    "cases": 501,
+    "range_order": [
+      0,
+      500
+    ]
+  }
+}

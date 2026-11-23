@@ -1,0 +1,35 @@
+{
+  "id": "sun346934-sign-composite-permanents",
+  "members": {
+    "README.md": {
+      "bytes": 3646,
+      "sha256": "b69e34f52a7023eb207ab34a5fd4c6472d1971a5fe24a05d08baab3bd8564d99"
+    },
+    "checks.json": {
+      "bytes": 3754,
+      "sha256": "bea6a85595f451285fb1f1322ccff85260522d8d84e4305ca84f2781aa56ac52"
+    },
+    "metadata.json": {
+      "bytes": 5490,
+      "sha256": "5ee9bea47813365cb2a61dac6cf1eb38e45fce0c2659aaf604314d5fd9676715"
+    },
+    "note.pdf": {
+      "bytes": 99615,
+      "sha256": "0cdb072c31492f135c860fd08bd2725c3284033e5daabe499b3e3c3f3857aa77"
+    },
+    "note.tex": {
+      "bytes": 20190,
+      "sha256": "64e8ac377fa98ad4ddb0dc92888bbd02890243606a1958386e3700bc3178b43a"
+    },
+    "oeis-a346934.txt": {
+      "bytes": 58274,
+      "sha256": "e622b104a75a1dd15ef63e8f7d913148adca6fb94e2064655dd1ec0ee9dea339"
+    },
+    "verify.py": {
+      "bytes": 12113,
+      "sha256": "41b3e60d845ee40683fe6122a2a23785c8d94472eb5acf7f4e70e14457c26768"
+    }
+  },
+  "revision": 2,
+  "schema_version": 1
+}

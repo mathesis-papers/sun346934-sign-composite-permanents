@@ -1,0 +1,41 @@
+{
+  "id": "sun346934-sign-composite-permanents",
+  "revision": 2,
+  "problem_ids": ["sun346934"],
+  "topic": "Sun's sign and composite-modulus assertions for difference permanents, their additive-matrix extension and related identities",
+  "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For Sun's Conjecture 1 in OEIS A346934, COMMENTS, revision 29 (November 5, 2025), unchanged in revision 38 (October 26, 2026), we give an alternative proof of the sign consequence of Kunisky-Spielman-Yu's skew rank-two identity (arXiv:2608.28520v1, August 28, 2026, Section 5, pages 24-25) and prove the composite-modulus assertion using Marcus's expansion (arXiv:2108.02528v1, August 5, 2021, Lemma 4). The sign identity gives an equality criterion for arbitrary real inputs. For integer additive matrices of order q-1, divisibility of every permanent by q holds exactly when q is composite and q is not 4. Farhi's binomial-coefficient identity gives their exact common divisor. We also prove the immediate sum- and power-matrix consequences and identify earlier proofs of the related reciprocal assertions.",
+  "summary": "Complete written proofs of both assertions of Sun's Conjecture 1, an alternative proof of the earlier skew rank-two sign identity with its equality criterion, and the exact common divisor of all additive-matrix permanents. The order-q-1 divisibility classification is precisely composite q other than 4. Earlier reciprocal solutions and elementary-symmetric expansions are explicitly credited.",
+  "license": "cc-by-4.0",
+  "date": "2026-11-17",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean",
+  "posing_source": {
+    "url": "https://oeis.org/A346934",
+    "author": "Zhi-Wei Sun",
+    "locator": "COMMENTS, Conjecture 1, revision 29, November 5, 2025; unchanged in revision 38, October 26, 2026",
+    "quote": "Conjecture 1: (-1)^n*a(n) > 0 for all n > 0. Also, a(n) == 0 (mod 2n+1) if 2n+1 is composite.",
+    "original_entry_date": "2021-08-08"
+  },
+  "related_prior_results": [
+    {"authors": ["Bakir Farhi"], "url": "https://arxiv.org/abs/0906.2295v2", "first_release": "2009-06-12", "locator": "Theorem 1, page 2", "statement": "The binomial-coefficient lcm identity, from which the factorial-split gcd follows."},
+    {"authors": ["Adam W. Marcus"], "url": "https://arxiv.org/abs/2108.02528v1", "first_release": "2021-08-05", "locator": "Lemma 4, pages 5-6", "statement": "The equivalent elementary-symmetric expansion for per[1+u_i*v_j], with the subset-image counting proof."},
+    {"authors": ["Zhi-Wei Sun"], "url": "https://arxiv.org/abs/2108.07723v7", "first_release": "2021-08-17", "locator": "Theorem 1.2 and Corollary 1.1", "statement": "The prime and nonreciprocal root-of-unity consequences."},
+    {"authors": ["Xuejun Guo", "Xin Li", "Zhengyu Tao", "Tao Wei"], "url": "https://arxiv.org/abs/2206.02592v1", "first_release": "2022-06-06", "locator": "Equation (1.1), proof in Section 3", "statement": "The reciprocal root-of-unity conjecture in A346949."},
+    {"authors": ["Yaoran Yang", "Yutong Zhang"], "url": "https://arxiv.org/abs/2605.19502v1", "first_release": "2026-05-19", "locator": "Theorem 2, equation (12)", "statement": "A346934 Conjecture 2 with the stronger modulus p^2."},
+    {"authors": ["Dmitriy Kunisky", "Daniel A. Spielman", "Xifan Yu"], "url": "https://arxiv.org/abs/2608.28520v1", "first_release": "2026-08-28", "locator": "Section 5, printed pages 24-25", "statement": "The skew rank-two matching identity whose difference-matrix specialization implies Sun's strict sign."},
+    {"authors": ["Vladeta Jovovic"], "url": "https://oeis.org/A346934", "first_release": "2026-10-25", "locator": "FORMULA; related formulas in A204249, A278845 and A278847", "statement": "The displayed sequence-specific elementary and mixed-symmetric expansions."}
+  ],
+  "coverage": {
+    "pinned_declaration": "D5.S3.Combinatorics.Permanental.SunA346934CompositeModulus.result",
+    "pinned_declaration_statement": "For n>=1, if 2n+1 is composite, then 2n+1 divides per[i-j] on 1,...,2n.",
+    "written_proofs": ["additive expansion", "universal divisibility classification for q>=2", "exact gcd at every order N>=0", "sign matching identity and real-input equality criterion", "positive centered formula", "odd-order vanishing and derangement restriction", "sum-matrix comparison", "order-q-1 power-sum and power-difference divisibility", "prime congruence and root-of-unity corollaries", "half-order square-sum prime congruence", "Jovovic's squared-sum expansion"],
+    "cited_proofs": ["Guo-Li-Tao-Wei's reciprocal root-of-unity identity", "Yang-Zhang's reciprocal-prime congruence modulo p^2"],
+    "finite_checks": "Exact ranges, algorithms and deterministic seeds are recorded in checks.json and verify.py.",
+    "not_covered": ["A278847 Conjectures 1 and 2", "A085807's odd-prime congruence and Toeplitz-minimum conjectures", "asymptotic formulas"],
+    "unposed_extension_exception": "Universal additive divisibility at q=4 is not asserted in the posing source; it fails for x=(1,0,0), y=(0,1,1), whose permanent is 2."
+  }
+}

@@ -1,0 +1,437 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,array,booktabs,longtable}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newcommand{\per}{\operatorname{per}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\title{Alternative proofs for Sun's difference-permanent conjectures\protect\\
+and Kunisky--Spielman--Yu's sign identity}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{November 17, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For Sun's Conjecture 1 in OEIS A346934, COMMENTS, revision 29
+(November 5, 2025), unchanged in revision 38 (October 26, 2026),
+we give an alternative proof of the sign consequence of
+Kunisky--Spielman--Yu's skew rank-two identity
+\cite[Section 5, pp.~24--25; August 28, 2026]{ksy} and prove the
+composite-modulus assertion using Marcus's expansion
+\cite[Lemma 4; August 5, 2021]{marcus}.
+The sign identity gives an equality criterion for arbitrary real inputs.
+For integer additive matrices of order $q-1$, divisibility of every
+permanent by $q$ holds exactly when $q$ is composite and $q\ne4$.
+Farhi's binomial-coefficient identity gives their exact common divisor.
+We also prove the immediate sum- and power-matrix consequences and
+identify earlier proofs of the related reciprocal assertions.
+\end{abstract}
+
+\section{The conjecture and its algebraic ingredients}
+For an $N\times N$ matrix $M$, put
+$\per M=\sum_{\sigma\in S_N}\prod_{i=1}^N M_{i,\sigma(i)}$, and set
+\[
+ a(n)=\per[i-j]_{1\le i,j\le 2n}\qquad(n\ge1).
+\]
+The exact wording of Sun's Conjecture 1 in A346934 \cite{oeis} is:
+\begin{quote}\ttfamily\raggedright
+(-1)\^{}n*a(n) > 0 for all n > 0.\\
+Also, a(n) == 0 (mod 2n+1) if 2n+1 is composite.
+\end{quote}
+We prove both assertions below. The sign also follows from the
+skew rank-two identity in Kunisky, Spielman and Yu \cite[pp.~24--25]{ksy},
+specialized to $C_{ij}=x_i-x_j$. We give a coefficient proof and the
+equality criterion. The divisibility argument combines a known
+permanent expansion with factorial divisibility; its universal
+integer-matrix form includes even composite moduli other than $4$.
+This extension and its converse are not assertions posed in A346934.
+
+Write $e_r(x_1,\ldots,x_N)$ for the elementary symmetric polynomial,
+with $e_0=1$. Marcus \cite[Lemma 4, pp.~5--6]{marcus} proves
+\[
+ \per[1+u_iv_j]=\sum_{r=0}^N r!(N-r)!e_r(u)e_r(v)
+\]
+by counting permutations with a fixed subset image.
+Factoring $y_j$ from column $j$ and using
+$e_N(y)e_r(y^{-1})=e_{N-r}(y)$ gives the next identity when all
+$y_j\ne0$; polynomial identity then removes that restriction.
+The direct counting proof also establishes it over any commutative ring.
+The specialization for $a(n)$ was recorded by Vladeta Jovovic in
+A346934 on October 25, 2026 \cite[FORMULA]{oeis}.
+
+\begin{lemma}[Additive expansion]\label{expansion}
+For $x,y$ in a commutative ring,
+\begin{equation}\label{eq:expansion}
+ \per[x_i+y_j]_{1\le i,j\le N}
+ =\sum_{r=0}^N r!(N-r)!e_r(x)e_{N-r}(y).
+\end{equation}
+The empty permanent, at $N=0$, is $1$.
+\end{lemma}
+\begin{proof}
+Choose the $x_i$ factors on a subset $I$ of $r$ rows. If the remaining
+rows map to a fixed subset $J$ of $N-r$ columns, their contribution is
+$\prod_{i\in I}x_i\prod_{j\in J}y_j$.
+There are $(N-r)!$ bijections to $J$ and $r!$ bijections from $I$ to
+its complement. Summing over $I,J,r$ gives \eqref{eq:expansion}.
+\end{proof}
+
+\section{The exact universal divisor}
+\begin{theorem}\label{universal}
+For an integer $q\ge2$,
+\begin{equation}\label{eq:universal}
+ q\mid\per[x_i+y_j]_{1\le i,j\le q-1}
+ \quad\hbox{for every }x,y\in\mathbb Z^{q-1}
+\end{equation}
+holds if and only if $q$ is composite and $q\ne4$.
+\end{theorem}
+\begin{proof}
+Suppose $q$ is composite and $q\ne4$. We show
+\begin{equation}\label{eq:split}
+ q\mid r!(q-1-r)!\qquad(0\le r\le q-1).
+\end{equation}
+Let $p$ be the least prime factor of $q$, write $q=pb$, and set
+$L=\max\{r,q-1-r\}$. Then $2\le p\le b$ and $2L\ge pb-1$.
+If $b>p$, then $2L\ge2b-1$, so $L\ge b$. The distinct factors
+$p,b$ both occur in $L!$, and their product is $q$.
+If $b=p\ge5$, then $2L\ge p^2-1\ge4p$, so the distinct factors
+$p,2p$ occur in $L!$ and their product is a multiple of $q$.
+The square $p=b=2$ is excluded. For the remaining square $q=9$,
+use the factors $3,6$ if $L\ge6$; otherwise $r=3,4,5$ and the
+products in \eqref{eq:split} are $720,576,720$.
+Since $L!$ divides $r!(q-1-r)!$, \eqref{eq:split} follows.
+Lemma~\ref{expansion} now proves \eqref{eq:universal}.
+
+Conversely, for prime $q$ the all-one matrix has permanent $(q-1)!$,
+not divisible by $q$. For $q=4$, take $x=(1,0,0)$ and $y=(0,1,1)$:
+\[
+ [x_i+y_j]=\begin{pmatrix}1&2&2\\0&1&1\\0&1&1\end{pmatrix},
+ \qquad\per[x_i+y_j]=2.
+\]
+Thus the unposed extension to every composite modulus fails at $4$.
+\end{proof}
+
+Farhi \cite[Theorem 1, p.~2]{farhi} proves
+$\lcm_{0\le r\le N}\binom Nr=\lcm(1,\ldots,N+1)/(N+1)$.
+It gives a stronger numerical description of the divisibility.
+\begin{corollary}\label{gcd}
+The positive gcd of the permanents of all integer additive matrices
+of order $N\ge0$ is
+\begin{equation}\label{eq:gcd}
+ D_N=\gcd_{0\le r\le N}\bigl(r!(N-r)!\bigr)
+     =\frac{(N+1)!}{\lcm(1,\ldots,N+1)}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The factorial gcd divides every value in \eqref{eq:expansion}.
+Conversely, choose $x$ with exactly $r$ entries $1$ and all others $0$,
+and $y$ with exactly $N-r$ entries $1$ and all others $0$.
+Only the $r$th term survives, and its value is $r!(N-r)!$.
+Thus the gcd of values equals the gcd of coefficients.
+Since $r!(N-r)!=N!/\binom Nr$, taking prime valuations gives
+$D_N=N!/\lcm_r\binom Nr$; apply Farhi's identity.
+For $N=0$, both sides are $1$.
+\end{proof}
+
+\begin{corollary}\label{suncomposite}
+If $n\ge1$ and $2n+1$ is composite, then $(2n+1)\mid a(n)$.
+The same divisibility holds for $\per[i+j]_{1\le i,j\le2n}$,
+the term A204249$(2n)$. For every $k\ge0$ and every composite
+$q\ne4$, both $\per[i^k+j^k]$ and $\per[i^k-j^k]$ of order
+$q-1$ are divisible by $q$.
+\end{corollary}
+\begin{proof}
+Substitute $x_i=i,y_j=-j$ or $j$ in Theorem~\ref{universal};
+for the last assertions use $x_i=i^k,y_j=\pm j^k$.
+Reversing columns of the sum matrix gives
+$i+(2n+1-j)\equiv i-j\pmod{2n+1}$, hence
+A204249$(2n)\equiv a(n)\pmod{2n+1}$ for all $n$.
+Its defining array is $i+j$ for $i,j\ge1$ \cite{sum,array}.
+\end{proof}
+
+\section{The sign identity and equality}
+Let $\mathcal M_{2n}$ denote the perfect matchings of $\{1,\ldots,2n\}$.
+The following specialization of \cite[Section 5, pp.~24--25]{ksy}
+explains the sign for arbitrary real inputs.
+\begin{theorem}\label{matching}
+For $n\ge1$ and real $x_1,\ldots,x_{2n}$,
+\begin{equation}\label{eq:matching}
+ \per[x_i-x_j]=(-1)^n n!\sum_{M\in\mathcal M_{2n}}
+                       \prod_{\{i,j\}\in M}(x_i-x_j)^2.
+\end{equation}
+Consequently $(-1)^n\per[x_i-x_j]\ge0$, with equality exactly
+when some value among the $x_i$ occurs more than $n$ times.
+In particular, $(-1)^n a(n)>0$.
+\end{theorem}
+\begin{proof}
+Write $F(x)=\per[x_i-x_j]$ and
+$G(x)=\sum_M\prod_{\{i,j\}\in M}(x_i-x_j)^2$.
+Both are symmetric, translation-invariant, homogeneous polynomials
+of degree $2n$, with degree at most $2$ in each variable.
+For $F$, symmetry follows by the same row and column permutation,
+and each variable occurs only in its row and column.
+Their monomial exponent patterns therefore have $k$ entries $2$,
+$2n-2k$ entries $1$, and $k$ entries $0$.
+
+For any polynomial with these properties, let $c_k$ be the coefficient
+of one monomial with that pattern. Translation invariance gives
+$\sum_i\partial_i F=0$, and likewise for $G$.
+The coefficient of a monomial with pattern
+$2^k1^{2n-2k-1}0^{k+1}$ in this derivative is
+\[
+ (k+1)c_k+2(2n-2k-1)c_{k+1}=0\qquad(0\le k<n).
+\]
+Indeed, differentiation either changes one of the $k+1$ zero
+positions from an original exponent $1$, or one of the
+$2n-2k-1$ single positions from an original exponent $2$.
+This recurrence determines all coefficients from $c_0$, so the
+space of such polynomials has dimension at most one.
+
+Evaluate at $n$ zeroes and $n$ ones. Only permutations mapping each
+half onto the other contribute to $F$, so $F=(-1)^n(n!)^2$.
+Exactly $n!$ matchings join the two halves and contribute $1$ to
+$G$; all other matchings contribute zero. Thus $G=n!\ne0$,
+which fixes the scalar as $(-1)^n n!$ and proves
+\eqref{eq:matching}.
+
+Every term of $G$ is nonnegative. A value occurring more than $n$
+times forces every matching to pair two equal values.
+Conversely, if no multiplicity exceeds $n$, sort the inputs and
+pair the $i$th with the $(i+n)$th for $1\le i\le n$.
+Each pair is unequal: equality would give a block of at least $n+1$
+equal values. That matching has positive product, proving strictness.
+For $x_i=i$ all values are distinct.
+\end{proof}
+
+\begin{corollary}[Centered formula]\label{positive}
+Let $E_k=e_k(1^2,3^2,\ldots,(2n-1)^2)$. Then
+\begin{equation}\label{eq:positive}
+ (-1)^n a(n)=2^{-2n}\sum_{k=0}^n(2k)!(2n-2k)!E_kE_{n-k}>0.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Set $z_i=2i-(2n+1)$. Then $z_i-z_j=2(i-j)$ and
+\[
+ \prod_i(1+z_it)=\prod_{h=1}^n(1-(2h-1)^2t^2).
+\]
+Thus $e_{2k}(z)=(-1)^kE_k$ and the odd elementary symmetric
+polynomials vanish. Substitution of $x=z,y=-z$ in
+\eqref{eq:expansion} gives \eqref{eq:positive}.
+Each $E_k$ is positive, including $E_0=1$.
+\end{proof}
+
+For odd order $N$, the difference matrix is the negative of its
+transpose, so its permanent equals its own negative and is zero.
+At any positive order, its zero diagonal removes all permutations
+with a fixed point. These prove the odd-order and derangement
+comments of A346934.
+
+\section{Nearby consequences and prior solutions}
+The next results of Sun \cite{sun} follow in a few lines from the same
+expansion. They are included to distinguish their scope from the
+composite-modulus statement.
+\begin{corollary}\label{prime}
+For every odd prime $p$, $a((p-1)/2)\equiv2\pmod p$.
+Also A204249$(p)\equiv p\pmod{p^2}$.
+\end{corollary}
+\begin{proof}
+Over $\mathbb F_p$, $\prod_{j=1}^{p-1}(t-j)=t^{p-1}-1$.
+Hence the intermediate $e_r(1,\ldots,p-1)$ vanish and
+$e_{p-1}=-1$. In \eqref{eq:expansion} for the difference
+matrix, the two endpoints each contribute $1$ by
+$(p-1)!\equiv-1\pmod p$, giving $2$.
+
+For the sum matrix of order $p$, put $u=(1,\ldots,p)$.
+Modulo $p$, its only nonzero elementary symmetric polynomials are
+$e_0=1$ and $e_{p-1}=-1$.
+The endpoint terms in \eqref{eq:expansion} total $2(p!)^2$;
+each term with $2\le r\le p-2$ contains two multiples of $p$.
+The two remaining terms total
+$2(p-1)!e_1(u)e_{p-1}(u)$, where $e_1(u)=p(p+1)/2$.
+Reducing modulo $p^2$ gives $p(p+1)\equiv p$.
+These are \cite[Corollary 1.1, (1.11); Theorem 1.2(ii), (1.7)]{sun}.
+\end{proof}
+
+\begin{corollary}[The half-order square-sum prime case]\label{squareprime}
+If $p=2n+1$ is prime, then
+\[
+ \per[i^2+j^2]_{1\le i,j\le n}
+ \equiv(-1)^{n-1}2n!\pmod p.
+\]
+This is Sun's proved comment in A278847 \cite{powers}.
+\end{corollary}
+\begin{proof}
+The numbers $1^2,\ldots,n^2$ are exactly the nonzero quadratic
+residues modulo $p$. Their polynomial is $t^n-1$, so their
+intermediate elementary symmetric polynomials vanish.
+The two endpoints in \eqref{eq:expansion} give $2(n!)^3$.
+Wilson's congruence gives $(-1)^n(n!)^2=-1$ modulo $p$,
+which yields the stated result. This does not establish the
+composite-modulus conjecture in the same entry.
+\end{proof}
+
+\begin{corollary}[Jovovic's squared-sum expansion]\label{squaredsum}
+Let $C(N,r,s)=[u^rv^s]\prod_{j=1}^N(1+ju+j^2v)$.
+Then the formula in A278845 \cite[FORMULA, October 25, 2026]{squares} is
+\[
+ \per[(i+j)^2]_{1\le i,j\le N}
+ =\sum_{r+s+t=N}2^r r!s!t!\,C(N,r,s)C(N,r,t).
+\]
+\end{corollary}
+\begin{proof}
+In each factor choose one of $i^2$, $2ij$, and $j^2$.
+If $r$ choices are mixed, $s$ are row squares and $t$ are column
+squares, the row monomials sum to $C(N,r,s)$ and the column
+monomials to $C(N,r,t)$. Bijections within the three categories
+number $r!s!t!$, and the mixed factors contribute $2^r$.
+Summing over $r+s+t=N$ proves the identity, including $N=0$.
+\end{proof}
+
+\begin{corollary}[Sun's root-of-unity identity]\label{rootsidentity}
+For a primitive $N$th root $\zeta\in\mathbb C$, $N\ge1$, and
+complex $u_1,\ldots,u_N$,
+\[
+ \per[1-\zeta^iu_j]_{1\le i,j\le N}
+ =N!\left(1-\prod_{j=1}^Nu_j\right).
+\]
+In particular, A346949$(n)=2(2n)!$.
+\end{corollary}
+\begin{proof}
+For $x_i=\zeta^{-i}$ the elementary symmetric polynomials satisfy
+\[
+ e_r(x)=0\quad(0<r<N),\qquad e_N(x)=(-1)^{N-1}.
+\]
+Apply \eqref{eq:expansion} to $[\zeta^{-i}-u_j]$ and multiply
+row $i$ by $\zeta^i$. The product of row multipliers is
+$(-1)^{N-1}$, giving the formula, including $N=1$.
+For $N=2n$, set $u_j=\zeta^{-j}$, whose product is $-1$.
+This recovers \cite[Theorem 1.2(i), (1.3)]{sun}.
+\end{proof}
+
+The reciprocal assertions use different matrices.
+Yang and Zhang \cite[Theorem 2, (12)]{yangzhang}, already in their
+May 19, 2026 first version, prove
+\[
+ \per C_p\equiv(-1)^{(p-1)/2}\pmod{p^2},\qquad
+ (C_p)_{ij}=\begin{cases}(i-j)^{-1},&i\ne j,\\0,&i=j,\end{cases}
+ \quad 1\le i,j\le p-1.
+\]
+All denominators are units modulo $p^2$. The zero diagonal restricts
+the permanent to derangements, so reduction modulo $p$ proves
+Conjecture 2 in A346934.
+For a primitive $2n$th root $\zeta$, Guo, Li, Tao and Wei
+\cite[(1.1), proof in Section 3]{guo}, first released June 6, 2022, prove
+\[
+ \sum_{\sigma\in D_{2n}}\prod_{j=1}^{2n}
+ \frac1{1-\zeta^{j-\sigma(j)}}
+ =\left(\frac{(2n-1)!!}{2^n}\right)^2.
+\]
+Here $D_{2n}$ is the set of derangements; no denominator vanishes.
+This is the reciprocal conjecture stated in A346949 \cite{roots}.
+These are cited prior solutions, not consequences of additive divisibility.
+
+\section{Coverage and verification}
+\small
+\begin{longtable}{@{}p{0.45\linewidth}p{0.50\linewidth}@{}}
+\toprule
+Source statement & Coverage \\
+\midrule
+\endhead
+A346934, Conjecture 1, composite sentence & Proved, Corollary~\ref{suncomposite}. \\
+A346934, Conjecture 1, strict sign & Proved, Theorem~\ref{matching} and Corollary~\ref{positive}; prior identity: Kunisky--Spielman--Yu \cite{ksy}. \\
+A346934, odd-order, derangement and sum-comparison comments & Proved after Corollary~\ref{positive} and in Corollary~\ref{suncomposite}. \\
+A346934, prime-congruence comment & Prior proof: Sun \cite{sun}; alternative proof in Corollary~\ref{prime}. \\
+A346934, Conjecture 2 & Prior proof cited: Yang--Zhang \cite[(12)]{yangzhang}, with stronger modulus $p^2$. \\
+A346934 and A204249, Jovovic expansions & Proved, Lemma~\ref{expansion}; general antecedent: Marcus \cite{marcus}. \\
+A204249, composite order-$(q-1)$ consequence & Proved, Corollary~\ref{suncomposite}; no new source assertion is assigned. \\
+A204249, odd-prime order-$p$ congruence & Prior proof: Sun \cite{sun}; alternative proof in Corollary~\ref{prime}. \\
+A346949, nonreciprocal formula & Prior proof: Sun \cite{sun}; alternative proof in Corollary~\ref{rootsidentity}. \\
+A346949, reciprocal conjecture & Prior proof cited: Guo--Li--Tao--Wei \cite{guo}. \\
+Universal additive classification and exact gcd & Not posed in these entries; proved in Theorem~\ref{universal} and Corollary~\ref{gcd}. The extension to $q=4$ fails for the displayed matrix. \\
+Power-matrix extension at order $q-1$ & Not posed here; proved in Corollary~\ref{suncomposite}. \\
+A278847, square-sum prime comment & Prior proof: Sun \cite{powers,sun}; alternative proof in Corollary~\ref{squareprime}. \\
+A278847, square-sum expansion & Proved by Lemma~\ref{expansion} with $x_i=y_i=i^2$; formula credited to Jovovic. \\
+A278847, Conjecture 1 at order $(q-1)/2$ & Not covered: its dimension differs from Corollary~\ref{suncomposite}. \\
+A278847, Conjecture 2 for reciprocal square differences & Not covered. \\
+A278845, squared-sum expansion & Proved, Corollary~\ref{squaredsum}; formula credited to Jovovic. Its asymptotic formula is not covered. \\
+A085807 \cite{absolute}, odd-prime congruence and Toeplitz-minimum conjectures & Not covered: the absolute-difference matrix is not generally additive. \\
+A346934, A204249, A278847 and A085807, asymptotic formulas & Not covered. \\
+A000166, derangement enumeration & Used for terminology; no enumeration theorem is asserted here. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The pinned Lean file
+\href{https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean}{\texttt{SunA346934CompositeModulus.lean}}
+contains the declaration \texttt{result} in namespace
+\texttt{D5.S3.Combinatorics.Permanental.}\allowbreak
+\texttt{SunA346934CompositeModulus}.
+Its statement is exactly odd-composite divisibility for the difference
+matrix in Corollary~\ref{suncomposite}, with $n\ge1$.
+The sign, equality criterion, exact gcd, even-modulus extension,
+converse and other corollaries have the written proofs given here.
+The reciprocal statements have the cited proofs just specified.
+
+The accompanying \texttt{verify.py} uses exact integer arithmetic.
+It checks all 130 supplied OEIS values against the expansion and
+centered formula; difference permanents through order $12$ by subset
+sums and through order $8$ by permutations; 120 seeded additive matrices;
+all 125750 factorial splits for $2\le q\le501$ and the gcd formula;
+the sum comparison for $1\le n\le130$; 94 multisets on
+$\{-1,0,1\}$ of even sizes $2$--$8$ and 100 seeded samples of
+sizes $2$--$10$ for the matching identity and equality criterion;
+365 power-matrix cases; the squared-sum expansion through order $8$;
+the half-order square-sum and sum congruences for 45 odd primes
+through $199$. Five reciprocal-prime instances through $13$ check
+the cited congruence modulo $p^2$. These are finite checks, distinct
+from the unrestricted written and cited proofs.
+
+\begin{thebibliography}{99}
+\bibitem{oeis} Z.-W. Sun, OEIS A346934, COMMENTS, Conjecture 1,
+revision 29 (November 5, 2025); unchanged in revision 38
+(October 26, 2026). \url{https://oeis.org/A346934}.
+\bibitem{ksy} D. Kunisky, D. A. Spielman and X. Yu,
+\emph{Inequalities for rank-two permanents and finite free convolutions},
+arXiv:2608.28520v1 (August 28, 2026), Section 5, pp.~24--25.
+\url{https://arxiv.org/abs/2608.28520v1}.
+\bibitem{marcus} A. W. Marcus,
+\emph{A Determinantal Identity for the Permanent of a Rank 2 Matrix},
+arXiv:2108.02528v1 (August 5, 2021), Lemma 4, pp.~5--6.
+\url{https://arxiv.org/abs/2108.02528v1}.
+\bibitem{farhi} B. Farhi,
+\emph{An identity involving the least common multiple of binomial
+coefficients and its application}, arXiv:0906.2295v2 (June 13, 2009),
+Theorem 1, p.~2; first version June 12, 2009.
+\url{https://arxiv.org/abs/0906.2295v2}.
+\bibitem{sun} Z.-W. Sun, \emph{Arithmetic properties of some permanents},
+arXiv:2108.07723v7 (June 6, 2022), Theorem 1.2 and Corollary 1.1;
+first version August 17, 2021.
+\url{https://arxiv.org/abs/2108.07723v7}.
+\bibitem{guo} X. Guo, X. Li, Z. Tao and T. Wei,
+\emph{The eigenvectors-eigenvalues identity and Sun's conjectures on
+determinants and permanents}, arXiv:2206.02592v1 (June 6, 2022),
+(1.1), Section 3.
+\url{https://arxiv.org/abs/2206.02592v1}.
+\bibitem{yangzhang} Y. Yang and Y. Zhang,
+\emph{Sun-type determinant and permanent congruences},
+arXiv:2605.19502v1 (May 19, 2026), Theorem 2, (12).
+\url{https://arxiv.org/abs/2605.19502v1}.
+\bibitem{sum} C. Kimberling, OEIS A204249.
+\url{https://oeis.org/A204249}.
+\bibitem{array} OEIS A003057, square-array definition.
+\url{https://oeis.org/A003057}.
+\bibitem{roots} Z.-W. Sun, OEIS A346949, COMMENTS.
+\url{https://oeis.org/A346949}.
+\bibitem{powers} OEIS A278847, Sun's COMMENTS and Jovovic's FORMULA.
+\url{https://oeis.org/A278847}.
+\bibitem{squares} OEIS A278845, Jovovic's FORMULA, October 25, 2026.
+\url{https://oeis.org/A278845}.
+\bibitem{absolute} OEIS A085807, COMMENTS.
+\url{https://oeis.org/A085807}.
+\end{thebibliography}
+\noindent\small Licensed under Creative Commons Attribution 4.0
+International (CC BY 4.0).
+\end{document}

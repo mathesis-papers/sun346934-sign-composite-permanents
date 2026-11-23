@@ -1,0 +1,404 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s1",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s1",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "For $x,y$ in a commutative ring,\n\\begin{equation}\n \\per[x_i+y_j]_{1\\le i,j\\le N}\n =\\sum_{r=0}^N r!(N-r)!e_r(x)e_{N-r}(y).\n\\end{equation}\nThe empty permanent, at $N=0$, is $1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s10",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s10",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s10",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "For a primitive $N$th root $\\zeta\\in\\mathbb C$, $N\\ge1$, and\ncomplex $u_1,\\ldots,u_N$,\n\\[\n \\per[1-\\zeta^iu_j]_{1\\le i,j\\le N}\n =N!\\left(1-\\prod_{j=1}^Nu_j\\right).\n\\]\nIn particular, A346949$(n)=2(2n)!$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s2",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s2",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "For an integer $q\\ge2$,\n\\begin{equation}\n q\\mid\\per[x_i+y_j]_{1\\le i,j\\le q-1}\n \\quad\\hbox{for every }x,y\\in\\mathbb Z^{q-1}\n\\end{equation}\nholds if and only if $q$ is composite and $q\\ne4$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s3",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s3",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "The positive gcd of the permanents of all integer additive matrices\nof order $N\\ge0$ is\n\\begin{equation}\n D_N=\\gcd_{0\\le r\\le N}\\bigl(r!(N-r)!\\bigr)\n     =\\frac{(N+1)!}{\\lcm(1,\\ldots,N+1)}.\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s4",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "If $n\\ge1$ and $2n+1$ is composite, then $(2n+1)\\mid a(n)$.\nThe same divisibility holds for $\\per[i+j]_{1\\le i,j\\le2n}$,\nthe term A204249$(2n)$. For every $k\\ge0$ and every composite\n$q\\ne4$, both $\\per[i^k+j^k]$ and $\\per[i^k-j^k]$ of order\n$q-1$ are divisible by $q$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s5",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s5",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "For $n\\ge1$ and real $x_1,\\ldots,x_{2n}$,\n\\begin{equation}\n \\per[x_i-x_j]=(-1)^n n!\\sum_{M\\in\\mathcal M_{2n}}\n                       \\prod_{\\{i,j\\}\\in M}(x_i-x_j)^2.\n\\end{equation}\nConsequently $(-1)^n\\per[x_i-x_j]\\ge0$, with equality exactly\nwhen some value among the $x_i$ occurs more than $n$ times.\nIn particular, $(-1)^n a(n)>0$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s6",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "Let $E_k=e_k(1^2,3^2,\\ldots,(2n-1)^2)$. Then\n\\begin{equation}\n (-1)^n a(n)=2^{-2n}\\sum_{k=0}^n(2k)!(2n-2k)!E_kE_{n-k}>0.\n\\end{equation}",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s7",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "For every odd prime $p$, $a((p-1)/2)\\equiv2\\pmod p$.\nAlso A204249$(p)\\equiv p\\pmod{p^2}$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s8",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "If $p=2n+1$ is prime, then\n\\[\n \\per[i^2+j^2]_{1\\le i,j\\le n}\n \\equiv(-1)^{n-1}2n!\\pmod p.\n\\]\nThis is Sun's proved comment in A278847 \\cite{powers}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:sun346934-sign-composite-permanents:2:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
+      },
+      "lineage": "collected:sun346934-sign-composite-permanents:s9",
+      "macros": {
+        "\\lcm": "\\operatorname{lcm}",
+        "\\per": "\\operatorname{per}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sun346934-sign-composite-permanents",
+      "scope": "in_scope",
+      "statement": "Let $C(N,r,s)=[u^rv^s]\\prod_{j=1}^N(1+ju+j^2v)$.\nThen the formula in A278845 \\cite[FORMULA, October 25, 2026]{squares} is\n\\[\n \\per[(i+j)^2]_{1\\le i,j\\le N}\n =\\sum_{r+s+t=N}2^r r!s!t!\\,C(N,r,s)C(N,r,t).\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
+      "toolchain": null,
+      "version": 2,
+      "work": "sun346934-sign-composite-permanents"
+    }
+  ]
+}

@@ -5,13 +5,15 @@
 For Sun's Conjecture 1 in OEIS A346934, COMMENTS, revision 29 (November 5, 2025), unchanged in revision 38 (October 26, 2026), we give an alternative proof of the sign consequence of Kunisky-Spielman-Yu's skew rank-two identity (arXiv:2608.28520v1, August 28, 2026, Section 5, pages 24-25) and prove the composite-modulus assertion using Marcus's expansion (arXiv:2108.02528v1, August 5, 2021, Lemma 4). The sign identity gives an equality criterion for arbitrary real inputs. For integer additive matrices of order q-1, divisibility of every permanent by q holds exactly when q is composite and q is not 4. Farhi's binomial-coefficient identity gives their exact common divisor. We also prove the immediate sum- and power-matrix consequences and identify earlier proofs of the related reciprocal assertions.
 
 - PDF: [frozen public file](paper.pdf)
+- DOI: [https://doi.org/10.5281/zenodo.24484829](https://doi.org/10.5281/zenodo.24484829)
+- Concept DOI: [https://doi.org/10.5281/zenodo.24484828](https://doi.org/10.5281/zenodo.24484828)
 - License: CC-BY-4.0
 - Version: 2
 - Mathesis record: [sun346934-sign-composite-permanents](https://mathesis-omega-research.apps.chrono-ai.fun/papers/sun346934-sign-composite-permanents?version=2)
 
 ## How to cite
 
-Haobo Ma, Wenlin Zhang (2026). Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity. Mathesis, version 2. https://mathesis-omega-research.apps.chrono-ai.fun/papers/sun346934-sign-composite-permanents?version=2
+Haobo Ma, Wenlin Zhang (2026). Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity. Mathesis, version 2. https://doi.org/10.5281/zenodo.24484829
 
 ## Statement progress
 

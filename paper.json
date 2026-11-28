@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24484828",
     "current_version": 2,
     "doi": "10.5281/zenodo.24484829",
+    "kind": "note",
     "lean_source": {
       "revision": "eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d",
       "url": "https://github.com/the-omega-institute/trureturing/blob/eac52692d71b89f89bd7c0d8c734ddc9c5d9e61d/D5/S3/Combinatorics/Permanental/SunA346934CompositeModulus.lean"
@@ -55,10 +56,12 @@
     "title": "Alternative proofs for Sun's difference-permanent conjectures and Kunisky-Spielman-Yu's sign identity",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T23:19:06.260323564Z",
         "revision": "2",
-        "version": 2
+        "version": 2,
+        "version_label": null
       }
     ],
     "work": "sun346934-sign-composite-permanents"
